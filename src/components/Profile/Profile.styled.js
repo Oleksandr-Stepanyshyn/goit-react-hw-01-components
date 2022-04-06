@@ -49,7 +49,7 @@ export const StatsItem = styled.li`
   padding: 16px;
   border: 1px solid #dcdfe3;
 
-  >:first-child {
+  >:first-of-type {
     color:#757575;
   };
   >:last-child{
