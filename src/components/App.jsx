@@ -1,10 +1,13 @@
 // import PropTypes from 'prop-types';
 import { Profile } from "./Profile/Profile";
+import { Statistic } from "./Statistics/Statistics";
 import user from '../data/user.json'
+import stats from '../data/statistic.json'
 
 export const App = () => {
   return (
-    <Profile
+    <>
+      <Profile
       username={user.username}
       tag={user.tag}
       location={user.location}
@@ -12,7 +15,12 @@ export const App = () => {
       followers={user.stats.followers}
       views={user.stats.views}
       likes={user.stats.likes}
-    />
+      />
+      <Statistic 
+        title = "UPLOAD STATS"
+        stats = {stats}
+      />
+    </>
   );
 };
 
@@ -26,4 +34,15 @@ export const App = () => {
 //     views: PropTypes.number.isRequired,
 //     likes: PropTypes.number.isRequired,
 //   }),
+// };
+
+// Statistic.propTypes = {
+//   title: PropTypes.string,
+//   stats: PropTypes.arrayOf(
+//     PropTypes.exact({
+//       id: PropTypes.string.isRequired,
+//       label: PropTypes.string.isRequired,
+//       percentage:PropTypes.number.isRequired
+//     })
+//   )
 // };
