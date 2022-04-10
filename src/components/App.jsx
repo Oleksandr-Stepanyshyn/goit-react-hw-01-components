@@ -1,8 +1,10 @@
 // import PropTypes from 'prop-types';
 import { Profile } from "./Profile/Profile";
 import { Statistic } from "./Statistics/Statistics";
+import { FriendList } from "./Friends/FriendList/FriendList";
 import user from '../data/user.json'
 import stats from '../data/statistic.json'
+import friends from '../data/friends.json'
 
 export const App = () => {
   return (
@@ -19,6 +21,9 @@ export const App = () => {
       <Statistic 
         title = "UPLOAD STATS"
         stats = {stats}
+      />
+      <FriendList 
+        friends={friends}
       />
     </>
   );
@@ -43,6 +48,17 @@ export const App = () => {
 //       id: PropTypes.string.isRequired,
 //       label: PropTypes.string.isRequired,
 //       percentage:PropTypes.number.isRequired
+//     })
+//   )
+// };
+
+// FriendList.protoType = {
+//   friends: PropTypes.arrayOf(
+//     PropTypes.exact({
+//       avatar: PropTypes.string.isRequired,
+//       name: PropTypes.string.isRequired,
+//       isOnline: PropTypes.bool.isRequired,
+//       id: PropTypes.number.isRequired,
 //     })
 //   )
 // };
